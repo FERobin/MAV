@@ -1,0 +1,32 @@
+#Serial Data Collection
+#Collect data from Optical Flow over Zigbee serial communication
+#Not yet tested as of 6/23/2018
+
+import serial
+
+#Get position of quadrotor in x,y,z
+def pos():
+    x = []
+    y = []
+    z = []    
+    ser = serial.Serial('COM0', 57600)
+    new = ser.readline()
+    news = new.split(',')
+    x.append(float(news[0]))
+    y.append(float(news[1]))
+    z.append(float(news[2]))
+    return [x, y, z]
+
+#Get angle of quadrotor in roll,pitch,yaw
+#less confident about this working
+def ang():
+    r = [] #roll
+    p = [] #pitch
+    y = [] #yaw
+    ser = serial.Serial('COM0', 57600)
+    new = ser.readline()
+    news = new.split(',')
+    r.append(float(news[3]))
+    p.append(float(news[4]))
+    y.append(float(news[5]))
+    return [r, p, y]
