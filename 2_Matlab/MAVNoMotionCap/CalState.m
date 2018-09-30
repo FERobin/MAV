@@ -2,12 +2,12 @@ function [state,mode]=CalState(handle)
 %CalState get the calibration state
 %handle is the handle for the gui
 %state is the current state
-
+%Edited by Phil Kwon 9/30/18
 str=get(handle.pushbutton1,'String');
 str2 = get(handle.pushbutton3,'String');
 str3=get(handle.pushbutton4,'String');
 str4 = get(handle.togglebutton2,'String');
-if strcmp(str4,'Motion Capture')
+if strcmp(str4,'Motion Capture') %Motion capture str4 should be editted out. Or you can make mode always=1 by editing out lines 10-12
     mode = 0; %Takeoff using motion cap
 else
     mode = 1; %Takeoff using optical flow
