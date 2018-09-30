@@ -1,0 +1,42 @@
+9/30/18
+    Andrew & Tim
+        Long debugging phase with the Zigbees
+        Baud Rate was changed to 38400 in order to communicate with the Zigbee 
+        6X multiplier applied to PLL (9X multiplier applied to Botao wasn't working)
+        Optical Flow is doing the XYZ
+        Zigbee communication interferes with communication  of the Optical Flow (57600)
+        ***Problem is communication can only be established with Zigbee OR Optical Flow.
+        Ask Professor Wilt for advice
+        Optical Flow only uses RX on UART1
+        *Why is there a PLL Multiplier*
+        *Why is the optical flow wired the way it is*
+        Wiring issues when the fram was moved? Maybe that's the source of all our issues.
+    Phil
+        Went through and edited the CalState and CalibrationControl to edit out all the motion capture
+        Will apply myself to other areas that need help.
+    Courtney & Patrick
+        Recomendation Optical Flow to I2C instead of UART
+        Take a step back and redo the entire thing to fix these issues.
+        Sort out the Github-Patrick
+        Optical Flow was flashed with some Opensource Github File. 
+        Reflash the Optical flow ***https://docs.px4.io/en/sensor/px4flow.html***
+            Optical Flow sensor needs to be hooked into computer via usb to be reflashed.
+Goals
+    Andrew & Tim
+        Check to see if Optical Flow is flashed
+        Talk to People to see if baud rate mismatch between Optical Flow and Zigbees
+        Explore I2C for Optical Flow sensor
+    Phil
+        Meet with Andrew and Tim
+        Finding Replacements
+        Comment things in the Main.
+    Courtney
+        Will drop by to see if the Optical Flow Lens is focused (When Andrew and Tim meet)
+    Patrick
+        Work on the GitHub files that weren't brought over successfully
+        Documentation
+            Wiring
+            Hardware Set-Up
+            Soft-ware 
+            Quick user guide to flashing and quick start up
+        Drop by one of Andrew and Tim's Sessions to check that everything is set up correctly
