@@ -23,7 +23,7 @@ function varargout = CalibrationControl(varargin)
 % Edit the above text to modify the response to help CalibrationControl
 
 % Last Modified by GUIDE v2.5 16-Jun-2018 00:51:52
-
+% Last Modified by Phillip Kwon 30-Sep-2018
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
 gui_State = struct('gui_Name',       mfilename, ...
@@ -119,8 +119,8 @@ function togglebutton2_Callback(hObject, eventdata, handles)
 
 % Hint: get(hObject,'Value') returns toggle state of togglebutton2
 str=get(hObject,'String');
-if strcmp(str,'Motion Capture')
+if strcmp(str,'Motion Capture') % Motion Capture should be edited out as we're no longer using it 9/30/18
     set(hObject,'String','Optical Flow');
-else
-    set(hObject,'String','Motion Capture');
+else %Edit this line out as there's no split if we're ignoring the above if statement 9/30/18
+    set(hObject,'String','Motion Capture'); % Edit this line out as MotCap is not used 9/30/18
 end
