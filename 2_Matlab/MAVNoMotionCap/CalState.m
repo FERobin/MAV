@@ -12,23 +12,23 @@ if strcmp(str4,'Motion Capture') %Motion capture str4 should be editted out. Or 
 else
     mode = 1; %Takeoff using optical flow
 end
-if strcmp(str,'Start')
+if strcmp(str,'Start')   % Is it starting up and calibrating or is it in hover. The str should properly reflect it's actions
     state=0;
-elseif strcmp(str,'Move')
+elseif strcmp(str,'Move')  %Might want to clarify move into move in a pattern.
     if mode
         state=2;
     else
         state=1;
     end
-elseif strcmp(str,'Land')
+elseif strcmp(str,'Land')  % What type of landing is this? Emergency landing
     state=2;
-elseif strcmp(str,'Stop')
+elseif strcmp(str,'Stop') % Is this the emergency kill switch that stops the drone?
     state=3;
-elseif strcmp(str,'Exit')
+elseif strcmp(str,'Exit') % Exit the screen/window I assume
     state=4;
 end
 
-if strcmp(str2,'Exit')
+if strcmp(str2,'Exit') % Exit the screen/window I assume
     state=3;    
 end
 if strcmp(str3,'Soft Landing')
